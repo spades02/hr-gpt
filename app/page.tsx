@@ -74,11 +74,13 @@ export default function Home() {
         <div className="h-[60vh] overflow-auto">
           {messages.map((message, index) => (
             <div className="">
-              <div key={index}>{message}</div>
-              <Separator className="my-4" />
+              <div key={index}>
+                {message}
+                <Separator className="my-4" />
+              </div>
             </div>
           ))}
-        <div ref={messagesEndRef} />
+          <div ref={messagesEndRef} />
         </div>
         <form onSubmit={handleSubmit}>
           <div className="flex flex-row gap-2 justify-between border-b backdrop-blur-3xl shadow-2xl rounded-full p-2 w-full">
