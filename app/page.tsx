@@ -19,7 +19,7 @@ export default function Home() {
   useEffect(() => {
     // This effect runs every time messages changes
     console.log("Updated state in useEffect:", messages);
-    
+
     setInputText("");
     scrollToBottom();
   }, [messages]);
@@ -73,11 +73,9 @@ export default function Home() {
       <div className="my-4 mx-96">
         <div className="h-[60vh] overflow-auto">
           {messages.map((message, index) => (
-            <div className="">
-              <div key={index}>
-                {message}
-                <Separator className="my-4" />
-              </div>
+            <div key={index}>
+              {message}
+              <Separator className="my-4" />
             </div>
           ))}
           <div ref={messagesEndRef} />
