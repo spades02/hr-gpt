@@ -70,8 +70,8 @@ export default function Home() {
           HR-GPT
         </h1>
       </div>
-      <div className="my-4 mx-96">
-        <div className="h-[60vh] overflow-auto">
+      <div className="my-4 lg:mx-96">
+        <div className="h-[72vh] overflow-auto">
           {messages.map((message, index) => (
             <div key={index}>
               {message}
